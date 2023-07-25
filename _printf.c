@@ -1,18 +1,4 @@
 #include "main.h"
-
-/**
- * print_buffer - Printing  of  content
- * @buffer: Array
- * @buff_ind: represents the length.
- */
-void print_buffer(char buffer[], int *buff_ind)
-{
-	if (*buff_ind > 0)
-		write(1, &buffer[0], *buff_ind);
-
-	*buff_ind = 0;
-}
-
 /**
  * _printf - the main  Printf function
  * @format: formating the printf
