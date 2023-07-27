@@ -1,5 +1,15 @@
 #include "main.h"
-void print_buffer(char buffer[], int *buff_ind);
+/**
+ * print_buffer - Printing existing buffer contents
+ * @buffer: characters of the array
+ * @buff_ind: length of theadded characters.
+ */
+void print_buffer(char buffer[], int *buff_ind)
+{
+        if (*buff_ind > 0)
+                write(1, &buffer[0], *buff_ind);
+        *buff_ind = 0;
+}
 /**
  * _printf -  the main entry point for Printf function
  * @format: formating the function
