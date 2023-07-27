@@ -67,14 +67,3 @@ int _printf(const char *format, ...)
 	
 	return (printed_chars);
 }
-/**
- * print_buffer - Printing existing buffer contents
- * @buffer: characters of the array
- * @buff_ind: length of theadded characters.
- */
-void print_buffer(char buffer[], int *buff_ind)
-{
-	if (*buff_ind > 0)
-		write(1, &buffer[0], *buff_ind);
-	*buff_ind = 0;
-}
