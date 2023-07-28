@@ -41,7 +41,8 @@ int _printf(const char *format, ...)
 			precision = get_precision(format, &i, list);
 			size = get_size(format, &i);
 			i++;
-			printed = handle_print(format, &i, list, buffer, flags, width, precision, size);
+			printed = handle_print(format, &i, list, buffer,
+					flags, width, precision, size);
 			if (printed == -1)
 				return (-1);
 			printed_chars += printed;
@@ -55,7 +56,7 @@ int _printf(const char *format, ...)
 	return (printed_chars);
 }
 /**
- * print_buffer- contents of the buffer 
+ * print_buffer- contents of the buffer
  * @buffer: array
  * @buff_ind: index adding the next character
  */
